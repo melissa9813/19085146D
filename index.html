@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Welcome to Jungeun's</title>
+        <style>
+            body {
+                font-family: 'Courier New', Courier, monospace;
+                margin: 0;
+            }
+
+            /* Header and Footer */
+            .header {
+                background-color: #e004a4;
+                padding: 80px 0 30px 0;
+                text-align: center;
+            }
+
+            .navbar {
+                overflow: hidden;
+                background-color: #e004a4;
+                position: fixed;
+                width: 100%;
+            }
+
+            .navbar a {
+                float: right;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 20px 20px;
+                font-size: 20px;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            .navbar a:hover {
+                background-color: #eafca7;
+                color: black;
+                
+            }
+
+            .footer {
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: auto;
+                background-color: #eafca7;
+                padding: 15px;
+            }
+
+            /* Contents */
+
+            .home-contents {
+                padding: 15px;
+            }
+
+            .photo {
+                margin: 50px 0 0 50px;
+                padding: 0;
+                position: sticky;
+                float: left;
+            }
+
+            #My_Photo {
+                border-radius: 50%;
+                border: 5px solid #e004a4;
+                height: 800px;
+            }
+
+            .overlay {
+                position: absolute;
+                background-color: #e004a4;
+                overflow: hidden;
+                width: 100%;
+                height:0;
+                border-radius: 50%;
+                transition: .5s ease;
+            }
+
+            .photo:hover .overlay {
+                bottom: 0;
+                height: 100%;
+            }
+
+            .overlay-text {
+                color: #1c3c64;
+                font-size: 50px;
+                font-weight: bold;
+                position: absolute;
+                top: 48%;
+                left: 5%;
+                text-align: center;
+            }
+
+
+            .intro {
+                background-color: #eafca7;
+                position: absolute;
+                top: 450px;
+                right: 80px;
+                width: 400px;
+                height: 450px;
+                z-index: -1;
+                overflow: hidden;
+                padding: 20px;
+                box-sizing: border-box;
+                opacity: 0.6;
+            }
+
+            .intro:hover {
+                opacity: 1;
+            }
+
+            .deco {
+                position: absolute;
+                top: 400px;
+                right: 0;
+                width: 100%;
+                height: 550px;
+                background-color: #f1fec4;
+                z-index: -2;
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <!-- Header -->
+        <div class="navbar">
+            <a href="contact.html">Contact</a>
+            <a href="personal.html">Personal</a>
+            <a href="academic.html">Academic</a>
+            <a href="about.html">About</a>
+            <a href="index.html">Home</a>
+        </div>
+
+        <div class="header">
+            <h1 style="color: white;">&#127799 Melissa's Website &#127799</h1>
+        </div>
+
+
+        <!-- Contents -->
+        <div class="home-contents">
+            <div class="photo">
+                <img src="MyPhoto.jpg" alt="My Photo" id="My_Photo">
+                <div class="overlay">
+                    <div class="overlay-text">Melissa Jungeun Eom &#9996</div>
+                  </div>
+            </div>
+
+            <div class="intro">
+                <h2 style="text-align: center;"> Nice to meet you! </h2> <br>
+                <p> My name is Jungeun Eom, but you can call me Melissa. <br> <br>
+                    I am a Korean, but stuying logistics engineering as a full time student at the Hong Kong Polytechnic University. <br><br>
+                    Pursuing enterprise computing as my minor, I am taking COMP3421 to fulfill the degree requirements. <br><br>
+                    
+                    I hope you enjoy my home page &#128519 <br><br>
+                </p>
+
+                <p style="text-align: right;">Stay safe and vigilant!</p>
+            </div>
+
+            <div class="deco"></div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            ✔  Designed by Jungeun Eom 19085146D <br>
+        </div>
+    </body>
+</html>

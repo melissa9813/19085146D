@@ -4,7 +4,12 @@
         <style>
             body {
                 font-family: 'Courier New', Courier, monospace;
+                height: 100%;
                 margin: 0;
+            }
+
+            * {
+                box-sizing: border-box;
             }
 
             /* Header and Footer */
@@ -14,11 +19,24 @@
                 text-align: center;
             }
 
+            #AcademicTitle {
+                animation-name: titlechange;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+            }
+
+            @keyframes titlechange {
+                0% {color: white;}
+                50% {color: #eafca7; transform: scaleX(0.8);}
+                100% {color: white;}
+            }
+
             .navbar {
                 overflow: hidden;
                 background-color: #e004a4;
                 position: fixed;
                 width: 100%;
+                max-width: 100%;
             }
 
             .navbar a {
@@ -46,6 +64,78 @@
                 background-color: #eafca7;
                 padding: 15px;
             }
+
+            /* contents */
+            iframe {
+                margin: auto;
+                width: 80%;
+                height: 100%;
+                padding: 50px;
+                border: 10px solid #e004a4;
+                background-color: #f9cded; 
+                display: block;            
+            }
+
+            .slide {
+                height: 100px;
+                width: 90%;
+                border-bottom: 5px solid black;
+                position: relative;
+                animation-name: moving;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+
+            }
+
+            @keyframes moving {
+                0%   {left:0; top:0;}
+                50%  {left:10%; top:0;}
+                100% {left:0; top:0;}
+            }
+
+            .hireme {
+                margin: auto;
+                width: 50%;
+                height: 100px;
+                display: block; 
+                position: relative;
+            }
+
+            .button {
+                text-decoration: none;
+                text-align: center;
+                border-radius: 2px;
+                border: 3px solid #1c3c64;
+                background-color: inherit;
+                color: #1c3c64;
+                padding: 10px;
+                font-size: 30px;
+                font-weight: bold;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                cursor: pointer;
+                float: left;
+            }
+
+            .button:hover {
+                background-color: #1c3c64;
+                color: white;
+            }
+            
+            span {
+                animation-name: fadeinout;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+            }
+            
+            @keyframes fadeinout {
+                0%   { opacity:1; }
+                50%  { opacity:0; }
+                100% { opacity:1; }
+            }
+
         </style>
     </head>
 
@@ -53,17 +143,39 @@
         <!-- Header -->
         <div class="navbar">
             <a href="contact.html">Contact</a>
-            <a href="personal.html">Personal</a>
             <a href="academic.html">Academic</a>
+            <a href="personal.html">Personal</a>
             <a href="about.html">About</a>
             <a href="index.html">Home</a>
         </div>
 
         <div class="header">
-            <h1 style="color: white;">&#127799 My Academic Profile &#127799</h1>
+            <h1 style="color: white;" id="AcademicTitle">&#127799 My Academic Profile &#127799</h1>
         </div>
 
 
+        <!-- Content -->
+        
+        <div class="academic-contents">
+            <h1 style="text-align: center;">My Schedule</h1>
+            <p style="text-align: center;">Total Credits: 21.5</p>
+            <iframe src="Schedule.pdf" alt="My Resume"></iframe>
+
+            <div class="slide"></div>
+            <br><h1 style="text-align: center;">My Resume</h1>
+            <p style="text-align: center;">For Summer Intership</p>
+            <iframe src="Resume.pdf" alt="My Resume"></iframe>
+
+
+            <div class="slide"></div>
+            <br><p style="text-align: center; font-weight: bold;">Actively Looking For Internship</p>
+            <h1 style="text-align: center;">Do you think I'm a suitable candidate for your company?</h1>
+            <div class="hireme">
+                <a href="contact.html" class="button"><span>&#128073 </span>Get In Touch<span> &#128072</span></a>
+            </div>
+
+            <div class="empty" style="height: 100px"></div>
+        </div>
 
 
         <!-- Footer -->

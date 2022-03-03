@@ -14,11 +14,24 @@
                 text-align: center;
             }
 
+            #PersonalTitle {
+                animation-name: titlechange;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+            }
+
+            @keyframes titlechange {
+                0% {color: white;}
+                50% {color: #eafca7; transform: scaleX(0.8);}
+                100% {color: white;}
+            }
+
             .navbar {
                 overflow: hidden;
                 background-color: #e004a4;
                 position: fixed;
                 width: 100%;
+                max-width: 100%;
             }
 
             .navbar a {
@@ -46,6 +59,126 @@
                 background-color: #eafca7;
                 padding: 15px;
             }
+
+
+            /* contents */
+
+            .personal-contents {
+                height: 100%;
+                width: 100%;
+            }
+
+            .parallax1, .parallax2, .parallax3, .parallax4 {
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                height: 100%;
+            }
+
+            .parallax1 {
+                background-size: cover;
+            }
+
+            .parallax2, .parallax3, .parallax4 {
+                background-size: contain;
+                background-color: #20242f;
+            }
+
+            .personal-text1, .personal-text2 {
+                background-color: #e004a4;
+                color: white;
+                font-size: 15px;
+                line-height: 1.5;
+                padding: 50px;
+                height: 200px;
+                width: 200px;
+                margin: 0;
+                position: absolute;
+                opacity: 0.7;
+                text-align: center;
+            }
+
+            .personal-text1 {
+                border-radius: 50%;
+                top: 250;
+                left: 10;
+            }
+
+            .personal-text2 {
+                border-radius: 50%;
+                top: 250;
+                right: 10;
+            }
+
+
+            .personal-text1:hover {
+                transform: translateX(150px);
+                transition: .5s ease-in;
+                opacity: 1;
+            }
+
+
+            .personal-text2:hover {
+                transform: translateX(-150px);
+                transition: .5s ease-in;
+                opacity: 1;
+            }
+
+            .personal-text3 {
+                height: auto;
+                padding: 10 50 20 50;
+                background-color: #e004a4;
+                color: white;
+            }
+
+            .personal-text3 > h1 {
+                color: #eafca7;
+            }
+
+            .personal-text3:hover {
+                transform: scaleY(1.3);
+                font-weight: bold;
+            }
+
+            .personal-text4 {
+                height: auto;
+                padding: 10 30 80 30;          
+                background-color: #e004a4;
+                margin-bottom: 50;
+            }
+
+            .personal-text4:hover {
+                opacity: 0.85;
+            }
+
+            .personal-text4:hover .tooltiptext {
+                visibility: visible;
+            }
+
+            .tooltiptext {
+                visibility: hidden;
+                padding: 5px;
+                background-color: #1c3c64;
+                color: #fff;
+                text-align: center;
+                bottom: 100;
+                left: 50;
+                position: relative;
+                z-index: 1;
+                border: 5px solid #e004a4;
+            }
+
+            ul {
+                background: #1c3c64;
+                padding: 20px;
+            }
+
+            ul li {
+                background: #bcc5d1;
+                margin: 5px;
+            }
+
+
         </style>
     </head>
 
@@ -53,18 +186,58 @@
         <!-- Header -->
         <div class="navbar">
             <a href="contact.html">Contact</a>
-            <a href="personal.html">Personal</a>
             <a href="academic.html">Academic</a>
+            <a href="personal.html">Personal</a>
             <a href="about.html">About</a>
             <a href="index.html">Home</a>
         </div>
 
         <div class="header">
-            <h1 style="color: white;">&#127799 My Personal Life &#127799</h1>
+            <h1 style="color: white;" id="PersonalTitle">&#127799 Get To Know Personally &#127799</h1>
         </div>
 
 
+        <!-- Contents -->
+        <div class="personal-contents">
 
+            <div class="parallax1" style="background-image: url(personal1.jpg);"></div>
+
+            <div class="personal-text1">
+                <strong style="font-size: 20px; color: #eafca7;">South Korea</strong><br>
+                I was born in South Korea. My hometown is Donghae-city, a small ocean city where many tourists love to visit. Many K-dramas were taken in my hometown.
+            </div>
+
+            <div class="parallax2" style="background-image: url(personal2.jpg);"></div>
+
+            <div class="personal-text2">
+                <strong style="font-size: 20px; color: #eafca7;">United States</strong><br>
+                I went to a private high school in Virginia and also got into Purdue University in Indiana as a full-time engineering student. I have lots of happy memories in the US.
+            </div>
+
+            <div class="parallax3" style="background-image: url(personal3.jpg);"></div>
+
+            <div class="personal-text3"> 
+                <h1> People Around Me </h1> 
+                I'd like to take advantage of this section to introduce my close friends and family. I have a younger brother. He is three years younger than me, and we really get along with each other. Since I left Korea when I was 16 years old, we had to be far apart for about 10 years. I think it made us have more close relationships than others. We share lots of secrets or concerns that we do not tell our parents.
+                <br><br> While I'm in Hong Kong, I usually spend my time in Hong Kong with local friends rather than Korean friends. My best local friend is Stephanie. She is not a PolyU student but We met at a Korean restaurant in TST where she worked as a server. I often sleep over at her house, go shopping together, or visit the fancy cafe. Even her dad knows me well, so he gave me Lai See in this Lunar New Year. 
+                <br><br> I am living with a Korean roommate at a PolyU Student Hall. She is also three years younger than me, but we are close friends. It was kind of funny that both of us requested a local roommate when we first applied to a student hall, but we ended up being roommates. She is fluent in Mandarin as she lived in Shanghai for ten years. She helps me a lot whenever I have a communication problem at restaurants. 
+            </div>
+
+            <div class="parallax4" style="background-image: url(personal4.jpg);"></div>
+
+            <div class="personal-text4">
+                <span class="tooltiptext">** Fun Facts About Me **</span>
+                <ul>
+                    <li>&nbsp&nbsp I have both Korean and US driver's licenses.</li>
+                    <li>&nbsp&nbsp I drink at least two cups of coffee every day. </li>
+                    <li>&nbsp&nbsp I learned piano and flute for five years but I forgot how to play. (Zero talents at music) </li>
+                    <li>&nbsp&nbsp My top three best friends are all in three different countries and studying three different majors. </li>
+                    <li>&nbsp&nbsp I was 21 years old when I was Year 1 at PolyU. (3 years older than classmates) </li>
+                    <li>&nbsp&nbsp I am scared of animals. </li>
+                    <li>&nbsp&nbsp I know much less about Kpop groups than my Hong Kong friends. </li>
+                </ul>
+            </div>
+        </div>
 
         <!-- Footer -->
         <div class="footer">

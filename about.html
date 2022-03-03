@@ -1,10 +1,15 @@
 <html>
     <head>
-        <title>About Jungeun</title>
+        <title>Quick Summary</title>
         <style>
             body {
                 font-family: 'Courier New', Courier, monospace;
+                height: 100%;
                 margin: 0;
+            }
+
+            * {
+                box-sizing: border-box;
             }
 
             /* Header and Footer */
@@ -14,11 +19,24 @@
                 text-align: center;
             }
 
+            #AboutTitle {
+                animation-name: titlechange;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+            }
+
+            @keyframes titlechange {
+                0% {color: white;}
+                50% {color: #eafca7; transform: scaleX(0.8);}
+                100% {color: white;}
+            }
+
             .navbar {
                 overflow: hidden;
                 background-color: #e004a4;
                 position: fixed;
                 width: 100%;
+                max-width: 100%;
             }
 
             .navbar a {
@@ -46,6 +64,53 @@
                 background-color: #eafca7;
                 padding: 15px;
             }
+
+
+            /* Contents */
+
+            .about-contents {
+                height: 100%;
+                width: 100%;
+            }
+
+
+            .scroll-img {
+                height: 100%; 
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            .img1 { background-image: url("about1.jpg"); }
+            .img2 { background-image: url("about2.jpg"); }
+            .img3 { background-image: url("about3.jpg"); }
+            .img4 { background-image: url("about4.jpg"); }
+            .img5 { background-image: url("about5.jpg"); }
+
+            .fixed-text {
+                border: 10px solid #f2f2f2;
+                background-color: rgb(0,0,0);
+                background-color: rgba(0,0,0,0.4);
+                color: white;
+                border-radius: 50%;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -40%);
+                z-index: 2;
+                padding: 50px;
+                text-align: center;
+                animation-name: fadeinout;
+                animation-duration: 4s;
+                animation-iteration-count: infinite;
+            }
+
+            @keyframes fadeinout {
+                0%   { opacity:1; }
+                50%  { opacity:0; }
+                100% { opacity:1; }
+            }
+
         </style>
     </head>
 
@@ -53,18 +118,30 @@
         <!-- Header -->
         <div class="navbar">
             <a href="contact.html">Contact</a>
-            <a href="personal.html">Personal</a>
             <a href="academic.html">Academic</a>
+            <a href="personal.html">Personal</a>
             <a href="about.html">About</a>
             <a href="index.html">Home</a>
         </div>
 
         <div class="header">
-            <h1 style="color: white;">&#127799 About Me &#127799</h1>
+            <h1 style="color: white;" id="AboutTitle">&#127799 Quick Glance &#127799</h1>
         </div>
 
+        <!-- Content -->
+        <div class="about-contents"> 
+            <div class="scroll-img img1"></div>
+            <div class="scroll-img img2"></div>
+            <div class="scroll-img img3"></div>
+            <div class="scroll-img img4"></div>
+            <div class="scroll-img img5"></div>
+        </div>
 
-
+        <div class="fixed-text">
+            <h3>Two Things I'm obsessed With</h3>
+            <h1 style="font-size:50px">Harry Potter <br>& Data Science</h1>
+            <p>And coffee, travel, ocean, etc. </p>
+        </div>
 
         <!-- Footer -->
         <div class="footer">

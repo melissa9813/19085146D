@@ -4,7 +4,12 @@
         <style>
             body {
                 font-family: 'Courier New', Courier, monospace;
+                height: 100%;
                 margin: 0;
+            }
+
+            * {
+                box-sizing: border-box;
             }
 
             /* Header and Footer */
@@ -14,11 +19,24 @@
                 text-align: center;
             }
 
+            #ContactTitle {
+                animation-name: titlechange;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+            }
+
+            @keyframes titlechange {
+                0% {color: white;}
+                50% {color: #eafca7; transform: scaleX(0.8);}
+                100% {color: white;}
+            }
+
             .navbar {
                 overflow: hidden;
                 background-color: #e004a4;
                 position: fixed;
                 width: 100%;
+                max-width: 100%;
             }
 
             .navbar a {
@@ -46,6 +64,121 @@
                 background-color: #eafca7;
                 padding: 15px;
             }
+
+
+            /* contents */
+            .contact-contents {
+                width: 100%;
+            }
+
+            .table-contents {
+                float: left;
+                margin-top: 5%;
+                width: 65%;
+            }
+
+            figure {
+                width: 20%;
+                padding: 10px;
+                text-align: center;
+                font-style: italic;
+                text-indent: 0;
+                float: left;
+                margin-left: 5%;
+                margin-top: 5%;
+            }
+
+            table {
+                height: 255px;
+                border-collapse: collapse;
+                border-bottom: 2px solid #ddd;
+                border-top: 2px solid #ddd;
+                width: 100%;
+                white-space: nowrap;
+            }
+
+            td, tr {
+                padding: 7px;
+                text-align: center;
+            }
+
+            th {
+                padding: 10px;
+                background-color: #1c3c64;
+                color: white;
+                text-align: center;
+            }
+
+            tr:nth-child(odd){
+                background-color: #f2f2f2;
+            }
+
+            tr:hover {
+                background-color: #eafca7;
+                color: #e004a4;
+                font-weight: bold;
+            }
+
+            .col3 {
+                width: 15%;
+            }
+
+            .button, input[type=submit] {
+                background-color: #e004a4;
+                color: white;
+                display: inline-block;
+                padding: 5px;
+                margin: 2px 1px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 16px;
+            }
+
+            .button {
+                width: 50%;
+                text-decoration: none;
+            }
+
+            .button:hover, input[type=submit]:hover {
+                transform: scale(150%);
+            }
+
+            input[type=submit] {
+                width: 55%;
+                font-family: 'Courier New', Courier, monospace;
+            }
+
+
+            input[type=text] {
+                width: 100%;
+                padding: 7px 7px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                font-family: 'Courier New', Courier, monospace;
+            }
+
+            /* Shaking image is learned from W3SChool */
+
+            .profileimg:hover {
+                animation: shake 0.5s;
+                animation-iteration-count: infinite;
+            }
+
+            @keyframes shake {
+                0% { transform: translate(1px, 1px) rotate(0deg); }
+                10% { transform: translate(-1px, -2px) rotate(-1deg); }
+                20% { transform: translate(-3px, 0px) rotate(1deg); }
+                30% { transform: translate(3px, 2px) rotate(0deg); }
+                40% { transform: translate(1px, -1px) rotate(1deg); }
+                50% { transform: translate(-1px, 2px) rotate(-1deg); }
+                60% { transform: translate(-3px, 1px) rotate(0deg); }
+                70% { transform: translate(3px, 1px) rotate(-1deg); }
+                80% { transform: translate(-1px, -1px) rotate(1deg); }
+                90% { transform: translate(1px, 2px) rotate(0deg); }
+                100% { transform: translate(1px, -2px) rotate(-1deg); }
+            }
+
         </style>
     </head>
 
@@ -53,18 +186,66 @@
         <!-- Header -->
         <div class="navbar">
             <a href="contact.html">Contact</a>
-            <a href="personal.html">Personal</a>
             <a href="academic.html">Academic</a>
+            <a href="personal.html">Personal</a>
             <a href="about.html">About</a>
             <a href="index.html">Home</a>
         </div>
 
         <div class="header">
-            <h1 style="color: white;">&#127799 My Contact Info &#127799</h1>
+            <h1 style="color: white;" id="ContactTitle">&#127799 My Contact Info &#127799</h1>
         </div>
 
 
+        <!-- Contents -->
+        <div class="contact-contents">
+            <figure>
+                <img src="contact1.jpg" class="profileimg" alt="Melissa's Photo" width="300" height="225">
+                <figcaption> Hover over image </figcaption>
+            </figure>
+            
+            
+            <div class="table-contents">
+                <table>
+                    <tr>
+                        <th>Method</th>
+                        <th>Address</th>
+                        <th>Contact</th>
+                    </tr>
 
+                    <tr>
+                        <td>PolyU Email</td>
+                        <td style="text-align: left;">19085146d@connect.polyu.hk</td>
+                        <td class="col3"> <a href="mailto:19085146d@connect.polyu.hk" class="button">SEND</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>Personal Email</td>
+                        <td style="text-align: left;">eommelissa@gmail.com</td>
+                        <td class="col3"> <a href="mailto:eommelissa@gmail.com" class="button">SEND</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>LinkedIn</td>
+                        <td style="text-align: left;">linkedin.com/in/jungeun-eom/</td>
+                        <td class="col3"> <a target="_blank" href="https://www.linkedin.com/in/jungeun-eom/" class="button">VISIT</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>Mailing Address</td>
+                        <td style="text-align: left;">1 Hung Lai Road, PolyU Student Hall of Residence</td>
+                        <td class="col3"> <a target="_blank" href="https://www.polyu.edu.hk/sao/student-resources-and-support-section/residential-life/university-managed-accommodations/hung-hom-halls/" class="button">CHECK</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>Direct Message</td>
+                        <td style="text-align: left;"><input type="text" id="dm" name="directmessage" placeholder="Leave your message here..."></td>
+                        <td class="col3"><input type="submit" value="SUBMIT"></td>
+                    </tr>
+                
+                </table>
+            </div>
+        </div>
 
         <!-- Footer -->
         <div class="footer">
